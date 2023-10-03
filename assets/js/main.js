@@ -14,6 +14,12 @@ function convertPokemonToLi(pokemon) {
             <div class="detail">
                 <ol class="types">
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+
+                    <div class="pokeButton">
+                    <button id="pokeDetailButton" type="button">
+                    <a href="https://bulbapedia.bulbagarden.net/wiki/${pokemon.name}_(Pok%C3%A9mon)" target="_blank">More details</a>
+                    </button>
+                    </div>
                 </ol>
 
                 <img src="${pokemon.photo}"
@@ -45,3 +51,4 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
